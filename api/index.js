@@ -1,13 +1,13 @@
 const axios = require('axios');
-module.exports = (req, res) => {
+module.exports = (request, response) => {
   axios.post('https://api3.bbbug.com/user/login')
     .then(res => {
       const data = res.data
       console.log(data);
-      res.send(data)
+      response.send(data)
     })
     .catch(error => {
       console.error(error);
-      res.send(error)
+      response.send(error)
     });
 };
