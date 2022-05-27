@@ -33,10 +33,6 @@ export default class Http {
     this.axiosRequestConfig.headers = {
       'content-type': HttpContentType.JSON,
     }
-    const accessToken = localStorage.getItem('access_token')
-    if (accessToken) {
-      this.axiosRequestConfig.headers.authorization = accessToken
-    }
     if (url) {
       this.httpUrl = url
     }
