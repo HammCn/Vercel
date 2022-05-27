@@ -3,7 +3,7 @@ module.exports = (request, callback) => {
   axios.post('https://api3.bbbug.com/user/login')
     .then(res => {
       const { data } = res.data
-      console.log(result);
+      console.log(data);
       return callback(data);
     })
     .catch(error => {
