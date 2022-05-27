@@ -1,11 +1,12 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import Http from '../http/Http'
 
-export default async (request: VercelRequest, response: VercelResponse) => {
+export default (request: VercelRequest, response: VercelResponse) => {
   const body = {
     request: request,
     response: response
   }
-  const result = await new Http("user/login").post()
-  response.status(200).send(JSON.stringify(result));
+  new Http("user/login").post().then((data) => {
+    response.status(200).send(JSON.stringify(data));
+  })
 };

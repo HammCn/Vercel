@@ -146,7 +146,6 @@ export default class Http {
     }
     return new Promise((data, error) => {
       this.axiosResponse.then((res) => {
-
         data(res.data.data)
       }).catch((err) => {
         error(err)
