@@ -1,6 +1,6 @@
 const axios = require('axios');
 module.exports = (request, response) => {
-  axios.post('https://api3.bbbug.com/user/login')
+  axios.post('https://api3.bbbug.com/user/login', res.body)
     .then(res => {
       const data = res.data
       console.log(data);
