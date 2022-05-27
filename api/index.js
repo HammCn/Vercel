@@ -1,9 +1,6 @@
 const axios = require('axios');
-
-
-
-export default (request, callback) => {
-  axios.get('https://api3.bbbug.com/user/login')
+module.exports = (request, callback) => {
+  axios.post('https://api3.bbbug.com/user/login')
     .then(res => {
       const { data } = res.data
       callback(data);
