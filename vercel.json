@@ -1,11 +1,9 @@
 {
-  "rewrites": [
+  "routes": [
     {
       "source": "/api/(.*?)",
       "destination": "/api"
-    }
-  ],
-  "routes": [
+    },
     {
       "src": "/(.*)",
       "status": 404,
