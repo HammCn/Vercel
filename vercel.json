@@ -5,9 +5,9 @@
       "destination": "/api"
     },
     {
-      "src": "/(.*)",
+      "src": "/(.*?)",
       "status": 404,
-      "dest": "/"
+      "destination": "/"
     }
   ]
 }
