@@ -3,10 +3,13 @@
     {
       "source": "/api/(.*?)",
       "destination": "/api"
-    },
+    }
+  ],
+  "routes": [
     {
-      "src": "/(.*?)",
-      "destination": "/"
+      "src": "/(.*)",
+      "status": 404,
+      "dest": "/index.html"
     }
   ]
 }
